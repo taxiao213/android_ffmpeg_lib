@@ -1,0 +1,14 @@
+prefix=/home/build/workspace/hqq/ffmpeg/ffmpeg-new/ffmpeg-4.3.2/android/arm64-v8a
+exec_prefix=${prefix}
+libdir=/home/build/workspace/hqq/ffmpeg/ffmpeg-new/ffmpeg-4.3.2/android/arm64-v8a/lib
+includedir=/home/build/workspace/hqq/ffmpeg/ffmpeg-new/ffmpeg-4.3.2/android/arm64-v8a/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 7.85.100
+Requires: 
+Requires.private: libswscale >= 5.7.100, libpostproc >= 55.7.100, libavformat >= 58.45.100, libavcodec >= 58.91.100, libswresample >= 3.7.100, libavutil >= 56.51.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}
